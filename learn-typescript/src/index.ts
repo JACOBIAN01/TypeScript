@@ -57,5 +57,24 @@ type CustomDate = Date;
 type CustomString = string;
 
 type TrueString = CustomString extends string ? true: false;
+type DateAssigment = CustomDate extends Date? true:undefined;
 
+// Type Hierarchy
+//unknwon -> any -> Specific -> never ....
+
+// Type Casting
+let lastName = "Mark";
+let castName = lastName as any;
+
+let firstName = "Mark";
+let castedName = <any>firstName;
+
+type User = {
+    name:string,
+    email:string,
+}
+
+function fetchUser(){
+    return {name:"Mark",email:"abc@gmail.com"} as User;
+}
 
