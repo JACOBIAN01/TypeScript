@@ -30,6 +30,23 @@ value = null
 value = undefined
 
 
+// Type Alias -> Create custom type name
+// Syntax => type custometypeName = type
+
+type StringType = string
+let name:StringType = "Subhadeep"
+console.log(name);
+
+type data = number|string|boolean // Applicatin of Type Aliasing
+let NewValue:data = true;
+NewValue = 12
+NewValue = "Type Check"
+
+//Declaration, Annotation , Inference
+let s; // Declaration without type or initialization
+let s1:string // Declaration with type annotation
+let age1 = 30; //Declarane with type Inference
+let email:string="abc" // Declaration with both annotation and initialization
 
 
 

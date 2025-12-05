@@ -22,4 +22,6 @@ value = true;
 value = 10;
 value = null;
 value = undefined;
+let name = "Subhadeep";
+console.log(name);
 //# sourceMappingURL=index.js.map
