@@ -48,11 +48,14 @@ let s1:string // Declaration with type annotation
 let age1 = 30; //Declarane with type Inference
 let email:string="abc" // Declaration with both annotation and initialization
 
+// Union Type -> |
+type MaybeDate = Date|undefined
 
 
+// Conditional Types
+type CustomDate = Date;
+type CustomString = string;
 
-
-
-
+type TrueString = CustomString extends string ? true: false;
 
 
