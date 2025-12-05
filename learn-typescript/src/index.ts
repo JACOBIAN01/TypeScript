@@ -51,7 +51,6 @@ let email:string="abc" // Declaration with both annotation and initialization
 // Union Type -> |
 type MaybeDate = Date|undefined
 
-
 // Conditional Types
 type CustomDate = Date;
 type CustomString = string;
@@ -77,4 +76,52 @@ type User = {
 function fetchUser(){
     return {name:"Mark",email:"abc@gmail.com"} as User;
 }
+
+//Typescript Object Type
+
+let personDetails = {
+    name:'Zoufi',
+    age:25,
+}
+//not optimal/ TypeScript can treat objbect as function , array or other
+let company:Object = {
+    name:"Newton School",
+    location:'Bangalore'
+}
+
+//Optimal Way -> newCompany is a Object Literal -> {}
+let newCompany:{} = {
+    name:"Veranda",
+    location:"Bangalore"
+}
+
+//Not Optimal but Bug Free 
+let car:{
+    brand:string,
+    model:string,
+    version:number
+} = {
+    brand:"BMW",
+    model:"A1",
+    version:1
+}
+
+//Optimal and Bug Free
+type CarType ={
+    brand:string;
+    model:string,
+    year:number,
+    color?:string // Option Property by ?
+    readonly type:"Sedan"|"SUV"|"Truck"
+}
+
+let myCar:CarType={
+    brand:'bmw',
+    model:"A1",
+    year:2024,
+    type:"SUV"
+}
+
+
+
 
